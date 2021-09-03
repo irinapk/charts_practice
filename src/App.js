@@ -9,6 +9,7 @@ import Grid from "@material-ui/core/Grid";
 import RadarChart from "./components/RadarChart";
 import MixedChart from "./components/MixedChart";
 import BubbleChart from "./components/BubbleChart";
+import StackedChart from "./components/StackedChart";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -114,7 +115,7 @@ function App() {
               style={{ minWidth: "600px" }}
               elevation={10}
             >
-              <BubbleChart />
+              <StackedChart />
             </Paper>
           </Grid>
         </Grid>
