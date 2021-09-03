@@ -1,44 +1,32 @@
 import React from "react";
-import { Bar, Chart } from "react-chartjs-2";
-import "chartjs-plugin-datalabels";
+import { Line, Chart } from "react-chartjs-2";
 
 Chart.defaults.font.size = 25;
 Chart.defaults.font.family = "Bebas Neue";
 
-const BarChart = () => {
+const LineChart = () => {
   // creating gradient colors and datasets
   const data = (canvas) => {
     const ctx = canvas.getContext("2d");
     function getGradientColor(ctx, colorTop, colorBottom) {
       const gradient = ctx.createLinearGradient(0, 0, 0, 600);
-      gradient.addColorStop(0.7, colorTop);
+      gradient.addColorStop(0.3, colorTop);
       gradient.addColorStop(1, colorBottom);
       return gradient;
     }
     return {
-      labels: ["One", "Two", "Three"],
+      labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
       datasets: [
         // first dataset
         {
-          label: "# of votes",
-          data: [3, 6, 8],
-          backgroundColor: [
-            getGradientColor(
-              ctx,
-              "rgba(54, 162, 235, 0.7)",
-              "rgba(242,254,255, 0.3)"
-            ),
-            getGradientColor(
-              ctx,
-              "rgba(52,140,78, 0.6)",
-              "rgb(133,255,186, 0.3)"
-            ),
-            getGradientColor(
-              ctx,
-              "rgba(133, 92, 92, 0.6)",
-              "rgb(255, 176, 176, 0.3)"
-            ),
-          ],
+          label: "# of something",
+          fill: true,
+          data: [8, 3, 6, 11, 4, 7, 9],
+          backgroundColor: getGradientColor(
+            ctx,
+            "rgba(54, 162, 235, 1)",
+            "rgba(242,254,255, 0.3)"
+          ),
           borderWidth: 0,
           borderColor: [
             "rgba(54, 162, 235, 1)",
@@ -49,8 +37,12 @@ const BarChart = () => {
         // second dataset
         {
           label: "Quantity",
-          data: [10, 5, 7],
-          backgroundColor: ["#5c7785", "#5e856a", "#856076"],
+          data: [10, 5, 7, 4, 4, 6, 5],
+          cubicInterpolationMode: "monotone",
+          backgroundColor: "#5e856a",
+          borderColor: "#5e856a",
+          borderWidth: 2,
+          borderDash: [2, 2],
         },
       ],
     };
@@ -66,7 +58,7 @@ const BarChart = () => {
       <h2 style={{ color: "black", fontFamily: "Bebas Neue" }}>
         <u>Bar Chart</u>
       </h2>
-      <Bar
+      <Line
         data={data}
         height={250}
         width={300}
@@ -92,7 +84,7 @@ const BarChart = () => {
               ticks: {
                 color: "black",
                 font: {
-                  size: 20,
+                  size: 14,
                   weight: "bold",
                   lineHeight: 1.2,
                 },
@@ -105,7 +97,6 @@ const BarChart = () => {
               text: "random data",
               color: "#041e40",
               font: {
-                // family: "Comic Sans MS",
                 size: 40,
                 lineHeight: 1.2,
               },
@@ -125,4 +116,4 @@ const BarChart = () => {
   );
 };
 
-export default BarChart;
+export default LineChart;
