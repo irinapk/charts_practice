@@ -8,6 +8,7 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import RadarChart from "./components/RadarChart";
 import MixedChart from "./components/MixedChart";
+import BubbleChart from "./components/BubbleChart";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -87,6 +88,33 @@ function App() {
               elevation={10}
             >
               <MixedChart />
+            </Paper>
+          </Grid>
+        </Grid>
+      </div>
+      <div className={classes.root}>
+        <Grid container spacing={1}>
+          <Grid item xs>
+            <Paper className={classes.paper} elevation={10}>
+              <BubbleChart />
+            </Paper>
+          </Grid>
+          <Grid item xs={4}>
+            <Paper
+              className={classes.paper}
+              style={{ minWidth: "600px" }}
+              elevation={10}
+            >
+              <BubbleChart />
+            </Paper>
+          </Grid>
+          <Grid item xs>
+            <Paper
+              className={classes.paper}
+              style={{ minWidth: "600px" }}
+              elevation={10}
+            >
+              <BubbleChart />
             </Paper>
           </Grid>
         </Grid>

@@ -18,7 +18,15 @@ const MixedChart = () => {
     return {
       labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
       datasets: [
-        // first dataset
+        {
+          label: "Quantity",
+          type: "line",
+          data: [10, 5, 7, 4, 4, 6, 5],
+          cubicInterpolationMode: "monotone",
+          backgroundColor: "#801818",
+          borderColor: "#801818",
+          borderWidth: 2,
+        },
         {
           label: "Price",
           type: "bar",
@@ -36,21 +44,10 @@ const MixedChart = () => {
             "rgba(133, 92, 92, 1)",
           ],
         },
-        // second dataset
-        {
-          label: "Quantity",
-          type: "line",
-          data: [10, 5, 7, 4, 4, 6, 5],
-          cubicInterpolationMode: "monotone",
-          backgroundColor: "#801818",
-          borderColor: "#801818",
-          borderWidth: 2,
-        },
-        // thrird dataset
         {
           label: "Quality",
           type: "line",
-          fill: true,
+          fill: false,
           data: [9, 7, -3, 12, 6, 7, 10],
           cubicInterpolationMode: "default",
           backgroundColor: "rgb(31,89,76, 0.5)",
@@ -83,7 +80,7 @@ const MixedChart = () => {
             y: {
               title: {
                 display: true,
-                text: "Value",
+                text: "Values",
               },
               min: -6,
               max: 15,
