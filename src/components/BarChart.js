@@ -74,7 +74,7 @@ const BarChart = () => {
         width={800}
         options={{
           responsive: true,
-          maintainAspectRatio: true,
+          //   maintainAspectRatio: true,
           scales: {
             y: {
               title: {

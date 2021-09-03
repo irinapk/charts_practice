@@ -47,32 +47,32 @@ const PieChart = () => {
         options={{
           responsive: true,
           maintainAspectRatio: true,
-          scales: {
-            y: {
-              title: {
-                display: true,
-                text: "Value",
-              },
-              min: 0,
-              max: 12,
-              ticks: {
-                stepSize: 3,
-              },
-            },
-            x: {
-              grid: {
-                display: true,
-              },
-              ticks: {
-                color: "black",
-                font: {
-                  size: 20,
-                  weight: "bold",
-                  lineHeight: 1.2,
-                },
-              },
-            },
-          },
+          //   scales: {
+          //     y: {
+          //       title: {
+          //         display: true,
+          //         text: "Value",
+          //       },
+          //       min: 0,
+          //       max: 12,
+          //       ticks: {
+          //         stepSize: 3,
+          //       },
+          //     },
+          //     x: {
+          //       grid: {
+          //         display: true,
+          //       },
+          //       ticks: {
+          //         color: "black",
+          //         font: {
+          //           size: 20,
+          //           weight: "bold",
+          //           lineHeight: 1.2,
+          //         },
+          //       },
+          //     },
+          //   },
           plugins: {
             title: {
               display: true,

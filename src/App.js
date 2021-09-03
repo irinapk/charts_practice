@@ -6,6 +6,7 @@ import PolarAreaChart from "./components/PolarAreaChart";
 import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
+import RadarChart from "./components/RadarChart";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,6 +25,10 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     verticalAlign: "middle",
+    // backgroundImage:
+    //   'url("https://static.vecteezy.com/system/resources/previews/000/204/228/original/abstract-global-tech-background-vector.jpg")',
+    // backgroundRepeat: "no-repeat",
+    // backgroundSize: "cover",
   },
 }));
 
@@ -71,7 +76,7 @@ function App() {
         <Grid container spacing={1}>
           <Grid item xs>
             <Paper className={classes.paper} elevation={10}>
-              <PolarAreaChart />
+              <RadarChart />
             </Paper>
           </Grid>
           <Grid item xs={8}>
