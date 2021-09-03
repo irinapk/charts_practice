@@ -10,8 +10,8 @@ const BarChart = () => {
   const data = (canvas) => {
     const ctx = canvas.getContext("2d");
     function getGradientColor(ctx, colorTop, colorBottom) {
-      const gradient = ctx.createLinearGradient(0, 0, 0, 600);
-      gradient.addColorStop(0.7, colorTop);
+      const gradient = ctx.createLinearGradient(0, 0, 0, 450);
+      gradient.addColorStop(0.6, colorTop);
       gradient.addColorStop(1, colorBottom);
       return gradient;
     }
@@ -25,17 +25,17 @@ const BarChart = () => {
           backgroundColor: [
             getGradientColor(
               ctx,
-              "rgba(54, 162, 235, 0.7)",
+              "rgba(54, 162, 235, 1)",
               "rgba(242,254,255, 0.3)"
             ),
             getGradientColor(
               ctx,
-              "rgba(52,140,78, 0.6)",
+              "rgba(52,140,78, 1)",
               "rgb(133,255,186, 0.3)"
             ),
             getGradientColor(
               ctx,
-              "rgba(133, 92, 92, 0.6)",
+              "rgba(133, 92, 92, 1)",
               "rgb(255, 176, 176, 0.3)"
             ),
           ],
@@ -50,7 +50,9 @@ const BarChart = () => {
         {
           label: "Quantity",
           data: [10, 5, 7],
-          backgroundColor: ["#5c7785", "#5e856a", "#856076"],
+          backgroundColor:
+            //"#0C2D48",
+            getGradientColor(ctx, "rgba(3,35,51, 1)", "rgba(242,254,255, 0.3)"),
         },
       ],
     };
@@ -59,7 +61,7 @@ const BarChart = () => {
   return (
     <div
       style={{
-        width: "500px",
+        width: "800px",
         height: "500px",
       }}
     >
@@ -68,8 +70,8 @@ const BarChart = () => {
       </h2>
       <Bar
         data={data}
-        height={250}
-        width={300}
+        height={400}
+        width={800}
         options={{
           responsive: true,
           maintainAspectRatio: true,

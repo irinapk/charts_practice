@@ -21,6 +21,9 @@ const PieChart = () => {
           ],
           borderWidth: 2,
           borderColor: "white",
+          hoverBackgroundColor: "#041e40",
+          hoverBorderColor: "#041e40",
+          hoverBorderWidth: 2,
         },
       ],
     };

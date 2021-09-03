@@ -51,20 +51,20 @@ const LineChart = () => {
   return (
     <div
       style={{
-        width: "500px",
-        height: "500px",
+        width: "1400px",
+        height: "600px",
       }}
     >
       <h2 style={{ color: "black", fontFamily: "Bebas Neue" }}>
-        <u>Bar Chart</u>
+        <u>Line Chart</u>
       </h2>
       <Line
         data={data}
-        height={250}
-        width={300}
+        height={500}
+        width={1400}
         options={{
           responsive: true,
-          maintainAspectRatio: true,
+          //   maintainAspectRatio: true,
           scales: {
             y: {
               title: {
@@ -94,7 +94,7 @@ const LineChart = () => {
           plugins: {
             title: {
               display: true,
-              text: "random data",
+              text: "new random data",
               color: "#041e40",
               font: {
                 size: 40,
