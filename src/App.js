@@ -7,6 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import RadarChart from "./components/RadarChart";
+import MixedChart from "./components/MixedChart";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -85,7 +86,7 @@ function App() {
               style={{ minWidth: "1400px" }}
               elevation={10}
             >
-              <LineChart />
+              <MixedChart />
             </Paper>
           </Grid>
         </Grid>

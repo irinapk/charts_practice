@@ -9,21 +9,23 @@ const PieChart = () => {
   const data = (canvas) => {
     const ctx = canvas.getContext("2d");
     return {
-      labels: ["One", "Two", "Three"],
+      labels: ["One", "Two", "Three", "Four", "Five"],
       datasets: [
         {
           label: "# of votes",
-          data: [3, 6, 8],
+          data: [3, 6, 8, 5, 7],
           backgroundColor: [
             "rgba(54, 162, 235, 0.8)",
             "rgba(52,140,78, 0.8)",
             "rgba(133, 92, 92, 0.8)",
+            "rgba(212,198,13, 0.7)",
+            "rgba(140, 138, 212, 0.7)",
           ],
           borderWidth: 2,
           borderColor: "white",
           hoverBackgroundColor: "#041e40",
           hoverBorderColor: "#041e40",
-          hoverBorderWidth: 2,
+          hoverBorderWidth: 3,
         },
       ],
     };
@@ -47,32 +49,7 @@ const PieChart = () => {
         options={{
           responsive: true,
           maintainAspectRatio: true,
-          //   scales: {
-          //     y: {
-          //       title: {
-          //         display: true,
-          //         text: "Value",
-          //       },
-          //       min: 0,
-          //       max: 12,
-          //       ticks: {
-          //         stepSize: 3,
-          //       },
-          //     },
-          //     x: {
-          //       grid: {
-          //         display: true,
-          //       },
-          //       ticks: {
-          //         color: "black",
-          //         font: {
-          //           size: 20,
-          //           weight: "bold",
-          //           lineHeight: 1.2,
-          //         },
-          //       },
-          //     },
-          //   },
+
           plugins: {
             title: {
               display: true,
