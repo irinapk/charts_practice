@@ -10,6 +10,7 @@ import RadarChart from "./components/RadarChart";
 import MixedChart from "./components/MixedChart";
 import BubbleChart from "./components/BubbleChart";
 import StackedChart from "./components/StackedChart";
+import DonutChart from "./components/DonutChart";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -106,7 +107,7 @@ function App() {
               style={{ minWidth: "600px" }}
               elevation={10}
             >
-              <BubbleChart />
+              <DonutChart />
             </Paper>
           </Grid>
           <Grid item xs>

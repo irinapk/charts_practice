@@ -1,11 +1,11 @@
 import React from "react";
-import { Pie, Chart } from "react-chartjs-2";
+import { Doughnut, Chart } from "react-chartjs-2";
 import "chartjs-plugin-datalabels";
 
 Chart.defaults.font.size = 25;
 Chart.defaults.font.family = "Bebas Neue";
 
-const PieChart = () => {
+const DonutChart = () => {
   const data = (canvas) => {
     const ctx = canvas.getContext("2d");
     function getGradientColor(ctx, colorTop, colorBottom) {
@@ -15,7 +15,7 @@ const PieChart = () => {
       return gradient;
     }
     return {
-      labels: ["One", "Two", "Three", "Four", "Five"],
+      labels: ["Blue", "Green", "Brown", "Yellow", "Purple"],
       datasets: [
         {
           label: "# of votes",
@@ -45,8 +45,8 @@ const PieChart = () => {
           ],
           borderWidth: 2,
           borderColor: "white",
-          hoverBackgroundColor: "#041e40",
-          hoverBorderColor: "#041e40",
+          //   hoverBackgroundColor: "#041e40",
+          //   hoverBorderColor: "#041e40",
           hoverBorderWidth: 3,
         },
       ],
@@ -62,23 +62,22 @@ const PieChart = () => {
           marginTop: "0",
         }}
       >
-        <u>pie chart</u>
+        <u>doughnut chart</u>
       </h2>
-      <Pie
+      <Doughnut
         data={data}
         height={100}
         width={100}
         options={{
           responsive: true,
           maintainAspectRatio: true,
-
+          cutout: 35,
           plugins: {
             title: {
               display: true,
-              text: "another random data",
+              text: "suspicious data",
               color: "#041e40",
               font: {
-                // family: "Comic Sans MS",
                 size: 40,
                 lineHeight: 1.2,
               },
@@ -90,7 +89,20 @@ const PieChart = () => {
                   size: 20,
                   lineHeight: 1.2,
                 },
+                boxWidth: 23,
               },
+            },
+            tooltip: {
+              backgroundColor: "rgba(43,76,153, 0.6)",
+              caretSize: 3,
+              padding: 15,
+              cornerRadius: 15,
+              bodyFont: {
+                size: 14,
+              },
+              boxWidth: 8,
+              boxHeight: 8,
+              displayColors: true,
             },
           },
         }}
@@ -99,4 +111,4 @@ const PieChart = () => {
   );
 };
 
-export default PieChart;
+export default DonutChart;

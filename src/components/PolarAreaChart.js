@@ -52,8 +52,8 @@ const PolarAreaChart = () => {
       </h2>
       <PolarArea
         data={data}
-        height={300}
-        width={600}
+        height={250}
+        width={400}
         options={{
           responsive: true,
           //   maintainAspectRatio: true,
@@ -81,6 +81,7 @@ const PolarAreaChart = () => {
                   size: 12,
                   lineHeight: 1.2,
                 },
+                boxWidth: 20,
               },
             },
           },
